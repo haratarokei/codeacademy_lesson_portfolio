@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Ovo&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --standard-font-size: 1.6rem;
+    font-family: "Proza Libre", sans-serif;
+    text-align: center;
+    line-height: 1.6;
+
+    --text-color-black: #4a4a4a;
+    --text-color-white: white;
+    --text-color-blue: rgb(68, 132, 250);
+    --dark-blue: rgb(44, 91, 177);
+    --text-color-gray: gray;
+    --light-gray: rgb(192, 192, 192);
+
+    color: var(--text-color-black);
+    background-color: var(--background-color-white);
+    
+    --background-color-white: rgb(240, 239, 235);
+    --background-color-gray:rgb(238, 238, 238);
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    box-sizing: display-box;
+}
+
+/* Global styles */
+
+h1,h2,h3,h4,h5,h6,p,a,span{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: var(--text-color-black);
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1.6rem;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.6rem;
+}
+
+h4 {
+    font-size: 2.0rem;
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+section {
+    text-align: left;
+    margin-bottom: 3.2rem;
+}
+
+/* Header */
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container nav {
+    font-size: 1.6rem;
+}
+
+.header-container nav a:not(:last-child) {
+    margin-right: 1.6rem;
+}
+
+
+/* About me */
+
+main {
+    margin-top: 3rem;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+}
+
+.about-me .text {
+    margin-right: .8rem;
+}
+
+.about-me .text p {
+    margin: .8rem 0;
+}
+
+.about-me img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Projects */
+
+.project-title {
+    cursor: pointer;
+}
+
+.project-title::marker {
+    font-size: 1.8rem;
+    content: '\2192';
+}
+
+.project-title h5 {
+    display: inline;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.project-description {
+    margin: 1rem 0 3rem 0;
+}
+
+/* Skills */
+
+.skills-container {
+    font-size: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills i {
+    margin: 1rem 1rem 0 0;
+    width: auto;
+}
+
+/* Contact */
+
+.contact {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 4rem 3rem 6rem 3rem;
+    box-shadow: 0px 0px 4px var(--light-gray);
+    overflow: hidden;
+}
+
+.contact-form .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.contact-form label {
+    font-size: 1.6rem;
+}
+
+.contact-form input, .contact-form textarea {
+    font-family: "Proza Libre", sans-serif;
+    border: 1px solid var(--light-gray);
+    background-color: white;
+    border-radius: 3px;
+}
+
+.contact-form input {
+    height: 3rem;
+    padding-left: 1rem;
+}
+
+.contact-form #email {
+    width: min(90%, 300px);
+}
+
+.contact-form textarea {
+    height: 10rem;
+    padding: 1rem;
+}
+
+.contact-form #submit {
+    margin-top: 2rem;
+    height: 4rem;
+    background-color: var(--text-color-blue);
+    color: var(--text-color-white);
+    font-family: "Proza Libre", sans-serif;;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transition-timing-function: ease-out;
+    transition-delay: 50ms;
+}
+
+.contact-form #submit:hover {
+    box-shadow: -.6rem .6rem var(--text-color-black);
+    transform: translate(.6rem, -.6rem);
+}
+
+.contact-form #submit:active {
+    box-shadow: none;
+    transform: none;
+    background-color: var(--dark-blue);
+    color: var(--text-color-gray);
+}
+
+/* Footer */
+
+footer {
+    padding: 2rem 0 0 0;
+}
+
+footer .heart {
+    color: red;
+}
+
+/* media */
+
+@media screen and (max-width: 700px){
+    .about-me {
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    .contact {
+        width: 100%;
+    }
+}
